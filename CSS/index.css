@@ -259,3 +259,9 @@ footer a:hover{
     color: rgb(233, 233, 233);
     transform: scale(1.05);
 }
+@media (max-width: 600px) {
+    .banner {
+        flex-direction: column;
+        background-size: auto 100%;
+    }
+}
