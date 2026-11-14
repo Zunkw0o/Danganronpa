@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../Fonts/Inter_18pt-Regular.ttf");
+}
+@font-face {
+    font-family: "Oswald";
+    src: url("../Fonts/Oswald-Regular.ttf");
+}
+body {
+    width: 100%;
+    font-family: "Inter";
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/monokumaBackground.jpg);
+    background-repeat: repeat;
+    background-size: 40px;
+}
+h1 {
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 1.75rem;
+}
+h1, h2 {
+    font-family: "Oswald";
+}
+.banner {
+    background-color: black;
+    background-image: url(../IMG/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    border-bottom: 3px #b30000 solid;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    animation: appearbanner 0.825s ease;
+}
+@keyframes appearbanner{
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.banner img {
+    width: 200px;
+    margin: 1rem;
+    animation: appearimage 0.825s ease;
+}
+.menu > li {
+    padding: 1rem;
+    animation: appearcategories 0.825s ease;
+    transition: transform 0.25s ease;
+}
+.menu > li:hover {
+    transform: scale(1.05);
+}
+.banner img, .menu > li {
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+@keyframes appearimage {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes appearcategories{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.menu {
+    cursor: pointer;
+    color: white;
+    padding: 0;
+}
+.menu li, .submenu1 li {
+    position: relative;
+}
+.menu li a {
+    color: white;
+    display: block;
+    padding: 0.8rem;
+    background-color: #d40101ea;
+    border: black 1px solid;
+}
+.submenu1, .submenu2 {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    width: 12.5rem;
+    padding: 0;
+    transition: opacity 0.5s ease, display 0.5s allow-discrete, visibility 0.5s allow-discrete, transform 0.5s ease;
+    visibility: hidden;
+    transform: translateX(-10px);
+}
+.submenu1 {
+    top: 100%;
+    left: 1.5rem;
+}
+.submenu2 {
+   position: static;
+   margin-left: 1.5rem;
+}
+.submenu1 a, .submenu2 a {
+    transition: background-color 0.25s ease, transform 0.25s ease, border 0.25s ease;
+}
+.submenu1 a:hover, .submenu2 a:hover {
+    transform: scale(1.05);
+}
+.menu li:hover > .submenu1, .submenu1 li:hover > .submenu2 {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transform: translateX(0);
+    animation: appearselections 0.825s ease;
+    animation-fill-mode: backwards;
+} 
+@keyframes appearselections {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@starting-style {
+    .menu li:hover > .submenu1, .submenu1 li:hover > .submenu2 {
+        opacity: 0;
+    }
+}
+.submenu1 .kyoko a:hover{
+    background-color: rgb(102, 77, 150, 0.967);
+    border: rgb(78, 59, 114) 2px solid;
+}
+.submenu1 .sayoko a:hover {
+    background-color: rgb(37, 53, 84, 0.967);
+    border: rgb(27, 38, 60) 2px solid;
+}
+.submenu1 .toko a:hover {
+    background-color: rgb(73, 54, 81, 0.967);
+    border: rgb(56, 41, 62) 2px solid;
+}
+main {
+    border: black 3px solid;
+    background-color: rgba(255, 255, 255, 0.981);
+    width: 80%;
+    min-height: 100vh;
+    margin: 15rem auto;
+    padding: 2rem;
+    animation: appearmain 0.825s ease;
+}
+@keyframes appearmain{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.indice {
+    border: black 1px solid;
+    float: right;
+    margin: 1.25rem;
+    width: 15.625rem;
+    max-width: 100%;
+    animation: appearindicebox 0.825s ease;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+@keyframes appearindicebox {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.indice h2 {
+    font-weight: lighter;
+    border-bottom: black 1px solid;
+    padding-left: 0.625rem;
+    background-color: rgb(239, 239, 239);
+    margin: 0;
+}
+.indice ul {
+    padding-left: 1.25rem;
+}
+ul, .submenu1 {
+    list-style: none;
+}
+a{
+    text-decoration-line: none;
+}
+.indice a {
+    display: block;
+    transition: 0.25s ease;
+}
+.indice a:link, .indice a:visited {
+    color: black;
+}
+.indice a:hover {
+    color: #940000;
+    transform: translateX(15px) scale(1.05);
+}
+.indice a:active {
+    color: #d40101;
+}
+footer a {
+    text-decoration-line: underline;
+    transition: transform 0.25s ease;
+}
+footer a:link, footer a:visited {
+    color: white;
+}
+footer {
+    border-top: 3px solid #b30000;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.94);
+    height: 200px;
+    padding: 0.625rem;
+    animation: appearfooter 0.825s ease;
+}
+@keyframes appearfooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+footer a:hover{
+    color: rgb(233, 233, 233);
+    transform: scale(1.05);
+}
