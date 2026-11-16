@@ -11,6 +11,10 @@ function continuar() {
         }, 100);
     });
 }
+document.getElementById("salir").addEventListener("click", salir);
+function salir() {
+    window.location.href = "about:blank";
+}
 if (localStorage.getItem("advertenciaAceptada") == "true"){
     document.querySelector(".advertencia-container").style.display = "none";
 }
