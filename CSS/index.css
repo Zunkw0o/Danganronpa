@@ -18,6 +18,66 @@ body {
     background-repeat: repeat;
     background-size: 40px;
 }
+.advertencia-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: opacity 0.75s ease;
+}
+.advertencia-container.cerrar {
+    opacity: 0;
+    pointer-events: none;
+}
+.advertencia button {
+    font-family: "Inter";
+    background-color: black;
+    color: white;
+    display: block;
+    width: 100%;
+    border: 2px solid red;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.advertencia button:hover {
+    background-color: red;
+    color: black;
+    transform: scale(1.05);
+}
+.advertencia {
+    animation: appearadvertencia 0.825s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.advertencia.cerrar {
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes appearadvertencia {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.advertencia {
+    background-color: black;
+    color: white;
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem;
+    text-align: center;
+    padding: 3rem;
+    border: black 3px solid;
+    border-radius: 10px;
+}
 h1 {
     font-size: 2.25rem;
 }
@@ -179,6 +239,15 @@ main {
         opacity: 1;
         transform: translateY(0);
     }
+}
+main article {
+    transition: opacity 1s ease;
+}
+.elementosOcultos {
+    opacity: 0;
+}
+.elementosVisibles {
+    opacity: 1;
 }
 .indice {
     border: black 1px solid;
@@ -355,4 +424,7 @@ footer a:hover{
     footer {
         max-height: 100vh;
     }
+}
+body.pausado .banner, body.pausado .banner *, body.pausado main, body.pausado main *, body.pausado footer, body.pausado footer * {
+    animation-play-state: paused !important;
 }
