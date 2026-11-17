@@ -178,9 +178,10 @@ h1, h2 {
     top: 100%;
     left: 1.5rem;
 }
+
 .submenu2 {
-   position: static;
-   margin-left: 1.5rem;
+    top: 0;
+    left: 100%;
 }
 .submenu1 a, .submenu2 a {
     transition: background-color 0.25s ease, transform 0.25s ease, border 0.25s ease;
@@ -211,17 +212,41 @@ h1, h2 {
         opacity: 0;
     }
 }
+.submenu1 .makoto a:hover{
+    background-color: #687653;
+    border: #252525 2px solid;
+}
 .submenu1 .kyoko a:hover{
     background-color: rgb(102, 77, 150, 0.967);
     border: rgb(78, 59, 114) 2px solid;
 }
-.submenu1 .sayoko a:hover {
-    background-color: rgb(37, 53, 84, 0.967);
-    border: rgb(27, 38, 60) 2px solid;
+.submenu1 .junko a:hover {
+    background-color: rgb(255, 217, 181);
+    border: rgb(255, 217, 181) 2px solid;
 }
-.submenu1 .toko a:hover {
-    background-color: rgb(73, 54, 81, 0.967);
-    border: rgb(56, 41, 62) 2px solid;
+.submenu1 .hajime a:hover {
+    background-color: #354D68;
+    border: #805344 2px solid;
+}
+.submenu1 .nagito a:hover {
+    background-color: #A4B59A;
+    border: #536B5B 2px solid;
+}
+.submenu1 .chiaki a:hover {
+    background-color: #EBCBD2;
+    border: #D99BAF 2px solid;
+}
+.submenu1 .shuichi a:hover {
+    background-color: #657B91;
+    border: #344657 2px solid;
+}
+.submenu1 .kaede a:hover {
+    background-color: #D99BAF;
+    border: #956477 2px solid;
+}
+.submenu1 .kokichi a:hover {
+    background-color: #A58BC5;
+    border: #51416F 2px solid;
 }
 main {
     border: black 3px solid;
